@@ -221,11 +221,25 @@ body{
 .main__title{
     color: black;
     font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.categories_title{
+
+    color: white;
+    font-size: 16px;
+    position:absolute;
+    padding-left: 30px;
+    width: 100%;
+
 }
 
 .input {
     background-color: rgba(255,255,255, 0.1);
-    border: 2px solid white;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 25px;
     color: black;
     font-family: 'Heebo', sans-serif;
@@ -233,8 +247,71 @@ body{
     height: 50px;
     padding: 0px 20px;
     width: 70%;
+    
+    
 }
 
 ::placeholder{
     color: white;
 }
+
+body{
+    margin: 0px;
+}
+
+.carousel{
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+}
+.caruosel__container{
+    white-space: nowrap;
+    margin: 70px 20px;
+    padding-bottom: 10px;
+}
+.carousel-item{
+    background-color: rgb(245, 239, 239);
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+   
+}
+
+.carousel-item:hover ~ .carousesl__item { 
+   transform: translate3d(100px, 0, 0); 
+}
+
+.caruosel__container:hover .carousel-item{
+  opacity: 0.2;
+}
+
+.caruosel__container:hover .carousel-item:hover{
+  transform: scale(1.5);
+  opacity: 2;
+}
+
+.carousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+ }
+ .carousel-item__details{
+     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%,  rgba(0, 0, 0, 0.0) 100% );
+     font-size: 10px;
+     opacity: 0.5;
+     transition: 450ms opacity;
+     padding: 10x;
+     position: absolute;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+ }
